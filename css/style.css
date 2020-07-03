@@ -83,6 +83,18 @@ img {
 	color: var(--accent-color);
 }
 
+.current:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	width: 100%;
+
+	border-radius: 2px;
+	background-color: var(--accent-color);
+}
+
 .adress-header {
 	/* display: flex;
 	justify-content: center;
@@ -137,6 +149,10 @@ img {
 
 .site-nav .item + .item {
 	margin-left: 50px;
+}
+
+.site-nav .item {
+	position: relative;
 }
 
 .address-nav {
@@ -341,8 +357,16 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 
-	margin-top: 27px;
-	margin-bottom: 27px;
+	background-color: rgba(47, 48, 58, 0.8);
+
+	padding-top: 27px;
+	padding-bottom: 27px;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	position: absolute;
+	width: 100%;
+	bottom: 0;
 }
 
 .full-text-item {
@@ -472,6 +496,7 @@ img {
 
 .skills .item {
 	width: 370px;
+	position: relative;
 }
 
 .project-blocks {
@@ -491,7 +516,8 @@ img {
   margin-bottom: 30px; */
 }
 
-.project-blocks .item:hover {
+.project-blocks .item:hover,
+.project-blocks .item:focus {
 	box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
